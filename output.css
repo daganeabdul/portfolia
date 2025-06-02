@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-orange-900: oklch(40.8% 0.123 38.172);
     --color-sky-500: oklch(68.5% 0.169 237.323);
+
     --color-sky-700: oklch(50% 0.134 242.749);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
@@ -20,12 +21,16 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
+
+
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-7xl: 80rem;
+
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -54,7 +59,7 @@
   }
   html, :host {
     line-height: 1.5;
-    -webkit-text-size-adjust: 100%;
+    webkit-text-size-adjust: 100%;
     tab-size: 4;
     font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
     font-feature-settings: var(--default-font-feature-settings, normal);
@@ -191,6 +196,7 @@
   }
 }
 @layer utilities {
+
   .fixed {
     position: fixed;
   }
@@ -206,6 +212,7 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+ af646a81d9b2cef650668f8180ed1f9826f6cfcf
   .mx-15 {
     margin-inline: calc(var(--spacing) * 15);
   }
@@ -251,6 +258,7 @@
   .inline-block {
     display: inline-block;
   }
+
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -269,12 +277,15 @@
   .h-25 {
     height: calc(var(--spacing) * 25);
   }
+
+af646a81d9b2cef650668f8180ed1f9826f6cfcf
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+
   .w-15 {
     width: calc(var(--spacing) * 15);
   }
@@ -284,6 +295,8 @@
   .w-25 {
     width: calc(var(--spacing) * 25);
   }
+
+
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
@@ -362,15 +375,18 @@
   .bg-blue-600 {
     background-color: var(--color-blue-600);
   }
+
   .bg-blue-700 {
     background-color: var(--color-blue-700);
   }
+
   .bg-gray-800 {
     background-color: var(--color-gray-800);
   }
   .bg-orange-900 {
     background-color: var(--color-orange-900);
   }
+
   .bg-sky-500 {
     background-color: var(--color-sky-500);
   }
@@ -386,6 +402,7 @@
   .stroke-sky-500 {
     stroke: var(--color-sky-500);
   }
+
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -475,12 +492,14 @@
   .text-black {
     color: var(--color-black);
   }
+
   .text-gray-500 {
     color: var(--color-gray-500);
   }
   .text-gray-900 {
     color: var(--color-gray-900);
   }
+
   .text-white {
     color: var(--color-white);
   }
@@ -492,6 +511,7 @@
     --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+
   .group-hover\:stroke-white {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -554,6 +574,7 @@
       color: var(--color-violet-700);
     }
   }
+
   .hover\:bg-blue-700 {
     &:hover {
       @media (hover: hover) {
@@ -561,6 +582,7 @@
       }
     }
   }
+
   .hover\:bg-sky-700 {
     &:hover {
       @media (hover: hover) {
@@ -568,6 +590,7 @@
       }
     }
   }
+
   .hover\:underline {
     &:hover {
       @media (hover: hover) {
@@ -575,6 +598,7 @@
       }
     }
   }
+
   .hover\:file\:bg-violet-100 {
     &:hover {
       @media (hover: hover) {
@@ -584,6 +608,7 @@
       }
     }
   }
+
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -594,6 +619,7 @@
       border-radius: var(--radius-lg);
     }
   }
+
   .dark\:file\:bg-violet-600 {
     @media (prefers-color-scheme: dark) {
       &::file-selector-button {
@@ -619,6 +645,7 @@
       }
     }
   }
+
 }
 nav {
   color: black;
@@ -706,11 +733,13 @@ nav {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
+
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -732,7 +761,9 @@ nav {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+
       --tw-border-style: solid;
+
     }
   }
 }
